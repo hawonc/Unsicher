@@ -15,22 +15,54 @@
     </head>
 
     <body>
-        <h1>Welcome to Unsicher</h1>
         <div class = "container">
             <div class = "login-content">
                 <form action="" class="login_form">
                     <!-- div for the welcome and instructions-->
                     <div>
-
+                        <h1 class="page_title"></h1>
+                            <span>Welcome to Unsicher</span>
+                        </h2>
+                        <p class="description">
+                            Plz gib ur personal info
+                        </p>
                     </div>
-                    <!-- div for inputs-->
-                    <!-- div for checks-->
+
+                    <div>
+                        <!-- div for inputs-->
+                        <div class="login_input">
+                            <div>
+                                <label for="input_email" class="login_label">Email</label>
+                                <input type="email" placeholder="Enter your email address" required class="login_input" id="input_email">
+                            </div>
+
+                            <div>
+                                <label for="input_pass" class="login_label">Password</label>
+
+                                <div class="login_box">
+                                    <input type="password" placeholder="Enter your password" required class="login_input" id="input_pass">
+                                    <i class="ri-eye-off-line login_eye" id="input_icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- div for checks-->
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input" id="input-check">
+                            <label for="input-check" class="login__check-label">Remember me</label>
+                        </div>
+                    </div>
+
                     <!-- div for buttons-->
+                    <div>
+                        <div class="login_buttons">
+                            <button class = "login_button">Log In</button>
+                            <button class = "signup_button">Create an account</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <button class = "login-button">Login</button>
-        <button class = "signup-button">Create an account</button>
         <!--ANY JS FILES HERE-->
     </body>
 </html>

@@ -1,0 +1,23 @@
+{
+  "name": "unsicher",
+  "version": "1.0.0",
+  "description": "Grabbing information from a user to determine safety of the location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawonc/Unsicher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hawonc/Unsicher/issues"
+  },
+  "homepage": "https://github.com/hawonc/Unsicher#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.21.0"
+  }
+}

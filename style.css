@@ -1,1 +1,24 @@
+@charset "UTF-8";
+/*fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url(img/image-test-McCarthy.jpg);
+}
+
+.background_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* For responsiveness*/
 

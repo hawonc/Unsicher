@@ -46,7 +46,7 @@ body {
 }
 
 header {
-    background-color: white;
+    background: linear-gradient(to right, #18453B, white, #18453B);
     color: #18453B;
     text-align: center;
     font-style: "Montserrat";
@@ -58,7 +58,7 @@ header {
     margin-left: 5%;
     width: 75%;
     height: 75%;
-    background-color: white;
+    background-color: hsla(244, 16%, 92%, 0.75);
     margin-top:1%;
     padding-left: 5px;
     display: block;
@@ -231,6 +231,54 @@ a {
     width: 15px;
 }
 
+/* for threat level*/
+.threat_level_graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.threat_level_graph .progress-container {
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: relative;
+    margin: 10vh 0;
+  }
+
+  .threat_level_graph #progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #00a19d;
+    background: -webkit-linear-gradient(to right, #00274C, #18453B, #ba0c2f);
+    background: linear-gradient(to right, #00274C, #18453B, #ba0c2f);
+  }
+
+  .threat_level_graph .progress-container #indecator {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color:white;
+  }
+
+  .Generator_result{
+    display: block;
+    height: 10vh; 
+    width: 96%; 
+    margin-left: 2%; 
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-top: 2%;
+    background-color: white;
+  }
 /* For responsiveness*/
 
 /* For small devices */

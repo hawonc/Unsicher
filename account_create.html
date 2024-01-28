@@ -18,16 +18,7 @@
         <div class = "container">
             <div class = "login-content">
                 <form action="" class="login_form">
-                    <!-- div for the welcome and instructions-->
-                    <div>
-                        <h1 class="title"></h1>
-                            <span>Welcome to Unsicher</span>
-                        </h1>
-                        <p class="description">
-                            Plz gib ur personal info
-                        </p>
-                    </div>
-
+                    <!-- account creation-->
                     <div>
                         <!-- div for inputs-->
                         <div class="login_inputs">
@@ -43,21 +34,25 @@
                                     <input type="password" placeholder="Enter your password" required class="login_input" id="input_pass">
                                     <i class="ri-eye-off-line login_eye" id="input_icon"></i>
                                 </div>
+
+                                <div class="login_box">
+                                    <input type="password" placeholder="Confirm your password" required class="login_input" id="input_pass">
+                                    <i class="ri-eye-off-line login_eye" id="input_icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- div for buttons-->
+                    <!-- go back button-->
                     <div>
                         <div class="login_buttons">
-                            <button class = "login_button">Log In</button>
-                            <button class = "login_button login_button-ghost"
-                            onclick= "location.href= 'account_create.html'">Create an account</button>
+                            <button class = "login_button">Create account</button>
+                            <a class="login_button login_button-ghost" href="login.html">I already have an account</a>
                         </div>
                     </div>
+                    
                 </form>
             </div>
         </div>
-        <!--ANY JS FILES HERE-->
     </body>
 </html>

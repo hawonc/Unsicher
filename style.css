@@ -12,7 +12,7 @@
     --body-color: #18453B;
     /*fonts*/
     --body-font: "Alata";
-    --h1-font-size: 1.25rem;
+    --h1-font-size: 1.24rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
     /*font weight*/
@@ -74,18 +74,20 @@ button {
   border-radius: 1rem;
 }
 
-.page_title {
+.title {
   color: var(--title-color);
   font-size: var(--h1-font-size);
   margin-bottom: 0.5rem;
 }
 
-.page_title span {
+.title span {
     color: var(--first-color);
+    font-size: var(--h1-font-size);
 }
 
 .description {
     font-size: var(--small-font-size);
+    font-style: var(--body-font);
 }
 
 .login_inputs {
@@ -164,6 +166,11 @@ button {
     border: 2px solid var(--first-color);
     color: var(--first-color);
     box-shadow: none;
+}
+
+/* for account creation*/
+a {
+    width: 15px;
 }
 
 /* For responsiveness*/

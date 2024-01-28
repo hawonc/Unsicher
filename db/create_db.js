@@ -31,7 +31,13 @@ function makeTables(sql){
                         asn TEXT,
                         proxy TEXT
                     )`);
-
+                    sql.query(`CREATE TABLE IF NOT EXISTS aiData(
+                        id TEXT,
+                        rating INT,
+                        comment TEXT,
+                        exploc TEXT
+                    )
+                    `)
                 }
             })
         }

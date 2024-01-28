@@ -12,7 +12,7 @@ conn = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor
 )
 
-api_key = "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"
+api_key = ""
 client = OpenAI(api_key=api_key)
 
 with open("/home/hawonc/Unsicher/tools/info.json", "r") as file:

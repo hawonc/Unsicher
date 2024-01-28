@@ -28,10 +28,15 @@
                 </ul>
             </aside>
             <section class= "right" style="height: 60vh;">
-                <button style = "margin-left: 2%; margin-top: 2%; font-size: 25px;">Generate URL</button>
-                <div class="Generator_result">
-                    
-                </div>
+                <form action="/action_page.php" style="margin-left: 2%;">
+                    <label for="country" style="margin-top: 2%;">Where are you expecting this person to be from? (optional)</label>
+                    <input type="text" id="country" placeholder="e.g. United States" name="country"><br><br>
+                </form>
+                <button class="login_button" style = "margin-left: 2%; margin-top: 2%; font-size: 15px; max-width: 200px;
+                                                      box-shadow: 0 6px 24px hsla(98, 92%, 14%, 0.5);
+                                                      background: linear-gradient(180deg, var(--title-color), var(--title-color));">Generate URL</button>
+                <p style="margin-left: 2%;">Your URL</p>
+                <div class="Generator_result" style="margin-top: 1%;"></div>
             </section>
         </main>
     </body>

@@ -283,13 +283,13 @@ a {
 
 /* For small devices */
 @media screen and (max-width: 360px) {
-    .login__buttons {
+    .login_buttons {
       flex-direction: column;
     }
   }
   /* For medium devices */
   @media screen and (min-width: 576px) {
-    .login__form {
+    .login_form {
       width: 450px;
       justify-self: center;
     }
@@ -301,15 +301,15 @@ a {
       display: grid;
       place-items: center;
     }
-    .login__content {
+    .login_content {
       width: 1024px;
       height: 600px;
     }
-    .login__img {
+    .login_img {
       border-radius: 3.5rem;
       box-shadow: 0 24px 48px hsla(244, 75%, 36%, 0.45);
     }
-    .login__form {
+    .login_form {
       justify-self: flex-end;
       margin-right: 4.5rem;
     }

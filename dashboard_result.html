@@ -15,7 +15,7 @@
         <script src="login.js" type="text/javascript" defer></script>
     </head>
     
-    <body style="background-image: url(img/stategreen-background.png);">
+    <body style="background-image: url(img/stategreen-background.png);" onload="loadData();">
         <header>
             <h1>Unsicher</h1>
             <h2>The best defense is good offense</h2>
@@ -28,8 +28,11 @@
                 </ul>
             </aside>
             <section class= "right" style="height: 60vh;">
+                <button class="login_button" id="post-btn" style = "margin-left: 2%; margin-top: 2%; font-size: 15px; max-width: 200px;
+                                                      box-shadow: 0 6px 24px hsla(98, 92%, 14%, 0.5);
+                                                      background: linear-gradient(180deg, var(--title-color), var(--title-color))">
+                                                      Show Result</button>
                 <p class="threat_level" style="font-size: 30px;">Threat Level: Suspiscious</p>
-
                 <div class="threat_level_graph">
                     <div class="progress-container">
                         <div id="progress">
@@ -43,5 +46,31 @@
                 </div>
             </section>
         </main>
+        <script>
+            const button = document.getElementById('post-btn');
+            button.addEventListener('click', async () => {
+                try {
+                    var url = window.location.href;
+                    var lastSegment = url.substr(url.lastIndexOf('/') + 1);
+                    const response = await fetch('http://www.unsicher.us/view'+lastSegment, {
+                        method: 'get',
+                    });
+                    if (response.ok) {
+                        const htmlContent = await response.json();
+                        const rating = htmlContent.rating;
+                        const comment = htmlContent.comment;
+                        const progressBar = document.getElementById('progress');
+                        document.querySelector('.GPT_response').innerHTML = comment;
+                        document.querySelector('indecator').innerHTML = rating + '%';
+                        progressBar.style.width = rating + '%';
+                        console.log('Completed!', response);
+                    } else {
+                        console.error(`Error: ${response.status} - ${response.statusText}`);
+                    }
+                } catch (err) {
+                    console.error(`Error: ${err}`);
+                }
+            });
+        </script>
     </body>
 </html>
